@@ -1,0 +1,15 @@
+Question 1. 
+
+Input = m,n,alpha,A,incRow,incCol,x,incX,beta,incY
+
+Initialise Blocksize_n
+Initialise Blocksize_m
+
+FOR i = 0, i<m, i+= Blocksize_m
+	FOR j = 0, j<n, j+= Blocksize_n
+		
+Question 3.
+1. Row-Major
+2. walltime -> time elapsed between start and end of process
+CPU time -> time in which the cpu was used
+3. 

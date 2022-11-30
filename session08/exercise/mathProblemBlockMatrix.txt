@@ -1,0 +1,16 @@
+Exercise: 
+
+Proof that 
+
+	up[a/b] = down[(a+b-1)/b]
+where up[.] is the roud up operator nad down[.] the round down opperator. 
+
+Proof: 
+
+	k = down[(a+b-1)/b] 	<=> a + b - 1 = k * b + r 	with 0<=r<b
+				<=> a = k*b + r - b + 1 	with 0<=r<b
+				<=> a = k*b + (r-b+1) 		with -b+1<=r-b+1<1
+				<=> a = k*b + (r-b+1) 		with -b<r-b+1<=0
+				<=> a = k*b + c 		with c = r-b+1 and -b<c<=0
+				<=> k = down[a/b]
+			
