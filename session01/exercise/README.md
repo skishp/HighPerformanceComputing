@@ -11,4 +11,4 @@ Test this
 
 ## Solution 
 The Coding solution can be found in FirstStepsWithC.c. Compiling and execution gives us the following
-!/Exercise01.png
+!(/Exercise01.png)
