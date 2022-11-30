@@ -1,6 +1,6 @@
 # Exercise 1
-1. A function 'init_vector' shall initialize a vector. The vector specified by a pointer to its first eleent, the number of elements, and the stride between two consecutive elements of the vector. The first element of the vector is to be initialized to 1, the second to 2 etc. 
-2. The fucntion 'print_vector' shall print a vector which is specified similarly with three parameters.
+1. A function `init_vector` shall initialize a vector. The vector specified by a pointer to its first eleent, the number of elements, and the stride between two consecutive elements of the vector. The first element of the vector is to be initialized to 1, the second to 2 etc. 
+2. The fucntion `print_vector` shall print a vector which is specified similarly with three parameters.
 
 Test this 
 * by defining a global array consisting of 8 Elements
@@ -9,6 +9,6 @@ Test this
 * by using the same global array for wto interleaving vectors of length 4 which are likewise initialized and printed. 
 
 
-## Soltuion 
+## Solution 
 The Coding solution can be found in FirstStepsWithC.c 
-!(/codingSoltuions/HPC1/session01/exercise01.png)
+!Exercise01.png
