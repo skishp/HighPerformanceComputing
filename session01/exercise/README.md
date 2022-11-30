@@ -10,5 +10,5 @@ Test this
 
 
 ## Solution 
-The Coding solution can be found in FirstStepsWithC.c 
-!Exercise01.png
+The Coding solution can be found in FirstStepsWithC.c. Compiling and execution gives us the following
+!/Exercise01.png
