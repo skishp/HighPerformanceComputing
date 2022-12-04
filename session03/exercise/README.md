@@ -5,8 +5,8 @@ Implement the infinity norm of two matrices in `geutils.h` from session 02. For 
 * Compute ||A - A^T|| and print its value (should be 126)
 *
 ## Solution 01 
-The implementation of the first task is given in `geutils.c`. First we remind us what the matrix infinity norm is. Its basicall the maximum of the absolute value of the rows. Here the absolute value of a row stands for: summation of the absolute row entries. 
-Since we reminded ourselfs of the definition the exercise becomes very simple. All we have to do is to take the sum of the absolute value of the row entries and check if this value exceeds our previous maximum. The summation is done via two for loops. 
+The implementation of the first task is given in `geutils.c`. First we remind us what the matrix infinity norm is. Its basically the maximum of the absolute value of the rows. Here the absolute value of a row stands for: summation of the absolute row entries. 
+Since we reminded ourselves of the definition the exercise becomes very simple. All we have to do is to take the sum of the absolute value of the row entries and check if this value exceeds our previous maximum. The summation is done via two for loops. 
 ```
 counter_current += abs(A[i*incRow + j*incCol] - B[i*incRowB + j*incColB]);
 ```
@@ -20,7 +20,7 @@ The `counter_current` has to reset to 0 before we start the second loop.
 The output of this exercise can be viewed in exercise01.png. The testing is implemented in `test_gematrix.c`.
 
 ## Provided test bench
-In this session we first were provided with the `test_bench.c` file. What this file does is messuring the time that our `geinit` function of session 02 in `geutils.c` takes to initialize a matrix in row major and then column major. 
+In this session we first were provided with the `test_bench.c` file. What this file does is measuring the time that our `geinit` function of session 02 in `geutils.c` takes to initialize a matrix in row major and then column major. 
 
 The output of `test_bench.c` was stored and can be viewed in `initmatrix.data`. If you take a look at the table in `initmatrix.data` you might notice that the initialization in col-major takes longer than initialization in row-major. 
 
