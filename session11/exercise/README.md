@@ -3,7 +3,7 @@ In our previous implementation of the matrix class we allocated memory for our m
 ```
 new double[m*n]
 ```
-However we may want use other tpyes than double. This can be achieved by using Templates. 
+However we may want use other types than double. This can be achieved by using Templates. 
 Rewrite the matrix class so that it uses template and can use different types. 
 
 ## Solution 01 
@@ -15,7 +15,7 @@ in our matrix structure, where
 ```
 template<typename T>
 ```
-is put infront of the structure. The rest of the matrix structure especially the functions are stayed the same. 
+is put in front of the structure. The rest of the matrix structure especially the functions are stayed the same. 
 Now we can define matrixes of the specified type double via
 ```
 Matrix<double> A(7, 8, StorageOrder::ColMajor);
@@ -28,7 +28,7 @@ Note: the type is specified in `Matrix<type>`. Furthermore since we use our `pri
 ```
 fmt::printf()
 ```
-We don't encounter any problems and errors at all. This is not the case if we use the `std::prinft()` function. But our `fmt::printf()` is far from perfect. If we want to implement a complex matrix, by relizing the complex number in a structure with real part and imaginary part
+We don't encounter any problems and errors at all. This is not the case if we use the `std::prinft()` function. But our `fmt::printf()` is far from perfect. If we want to implement a complex matrix, by realizing the complex number in a structure with real part and imaginary part
 ``` 
 double re;
 double im; 
@@ -55,8 +55,8 @@ In the current state, every matrix object had its own storage. We have, however,
 * releasing storage
 It only provides a view to a larger matrix. This approach is known as `MVC` pattern, where MCV is an acronym for model,viewer and controller. 
 
-* What happens if an entirel different type is passed to `print_matrix` (for example 1) instead of a matrix variable?
-* Is it possible to have a MatrixView object that referes to another MatrixView object? 
+* What happens if an entire different type is passed to `print_matrix` (for example 1) instead of a matrix variable?
+* Is it possible to have a MatrixView object that refers to another MatrixView object? 
 * Fix the `init_matrix` template function such that it works also for instances of MatrixView. 
 * By default, C++ offers a copy constructor and an assignment operator for each class which actually copies all individual object variables from m to data. Is it advisable to accept the default implementations for the matrix class? Is it a problem for the MatrixView class?  If you want to inhibit a default implementation just add the declaration with a = delete construct at its end. The following example inhibits the copy constructor and assignment operator for Matrix:
 ``` 
@@ -100,16 +100,16 @@ typename Matrix::Element.
 ```
 In addition, it might be helpful to add an assertion using assert that makes sure that the ranges of the submatrix are restricted to the ranges of the matrix it is derived from.
 
-## Soltuion 03
+## Solution 03
 1. In the first problem, if we pass 1, then the template function is instantiated with the template type parameter T set to int. Which means that our Matrix is now of type int. Expressions like `A.m` or `A(i,j)` won't work anymore. 
 2. It is possible to have MatrixView object which is constructed from another MatrixView object as the constructor just expects dimensions, a pointer to the data, and the increments. 
-Note: Here we have to becareful that the MatrixViews object do not outlive the associated storage which is maintained by the original Matrix object. 
+Note: Here we have to be careful that the MatrixViews object do not outlive the associated storage which is maintained by the original Matrix object. 
 
 The implementation for the other task is found in matrix_class13.cpp The output is given in exercise03.png
 
 
 ## Exercise 04
-The `GMP` library (GMP is an acronym of GNU multiple precision library) provides numerical types with arbitrar precisions. The library provides, among other types, a class named `mpq_class` for rational numbers where the numerator and denominator are maintained as a seperated integer values of arbitrary precision. 
+The `GMP` library (GMP is an acronym of GNU multiple precision library) provides numerical types with arbitrary precisions. The library provides, among other types, a class named `mpq_class` for rational numbers where the numerator and denominator are maintained as a separated integer values of arbitrary precision. 
 * Adapt `print_value` such that rational numbers are supported as well. 
 * Add a template function `scale_matrix` that multiplies all elements of a matrix with given value. Use this function wen you test your programs with rational numbers.
 * Test wether a `fmt::printf` based variant would work for rational numbers out of the box. 
